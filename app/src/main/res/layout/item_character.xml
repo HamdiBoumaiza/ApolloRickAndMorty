@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/img_character"
         android:layout_width="match_parent"
@@ -23,11 +22,11 @@
         android:id="@+id/tv_character"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@color/color_b6cdf2"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
