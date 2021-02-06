@@ -1,4 +1,4 @@
-package com.hb.rickandmortyapollo.presentation
+package com.hb.rickandmortyapollo.presentation.characters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,7 +8,10 @@ import com.hb.rickandmortyapollo.R
 import com.hb.rickandmortyapollo.databinding.ItemCharacterBinding
 import com.hb.rickandmortyapollo.domain.models.SingleCharacterModel
 
-class ListCharactersAdapter(private val list: List<SingleCharacterModel>) :
+class ListCharactersAdapter(
+    private val list: List<SingleCharacterModel>,
+    private val clickAction: (SingleCharacterModel) -> Unit
+) :
     RecyclerView.Adapter<ListCharactersAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
@@ -27,6 +30,10 @@ class ListCharactersAdapter(private val list: List<SingleCharacterModel>) :
 
     inner class ViewHolder(private val view: ItemCharacterBinding) :
         RecyclerView.ViewHolder(view.root) {
+        init {
+            view.root.setOnClickListener { clickAction(list[adapterPosition]) }
+        }
+
         fun bindTo(singleCharacterModel: SingleCharacterModel) {
             with(view) {
                 singleCharacterModel.apply {

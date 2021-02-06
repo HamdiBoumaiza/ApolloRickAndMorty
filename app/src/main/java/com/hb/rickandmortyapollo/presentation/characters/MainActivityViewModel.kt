@@ -1,4 +1,4 @@
-package com.hb.rickandmortyapollo.presentation
+package com.hb.rickandmortyapollo.presentation.characters
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData

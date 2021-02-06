@@ -4,6 +4,7 @@ plugins {
     id 'com.apollographql.apollo'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -66,8 +67,6 @@ dependencies {
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
     implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha02'
     kapt 'androidx.hilt:hilt-compiler:1.0.0-alpha02'
-
-    implementation "com.google.code.gson:gson:2.8.6"
 
     implementation "androidx.fragment:fragment-ktx:1.2.5"
 

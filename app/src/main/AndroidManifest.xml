@@ -13,13 +13,14 @@
         android:name=".BaseApp"
         android:theme="@style/Theme.RickAndMortyApollo">
 
-        <activity android:name=".presentation.MainActivity">
+        <activity android:name=".presentation.characters.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <activity android:name=".presentation.details.DetailsActivity"/>
     </application>
 
 </manifest>
