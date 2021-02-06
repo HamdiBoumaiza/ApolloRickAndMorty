@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -15,23 +16,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:shapeAppearanceOverlay="@style/CornerSize5Percent" />
+        app:shapeAppearanceOverlay="@style/CornerSize5Percent"
+        tools:src="@drawable/rick_morty_wallpaper" />
 
     <TextView
         android:id="@+id/tv_character"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95" />
+        app:layout_constraintVertical_bias="0.95"
+        tools:text="Rick Sanchez" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

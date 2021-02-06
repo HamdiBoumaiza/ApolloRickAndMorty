@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".presentation.details.DetailsActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.25"
+        android:scaleType="centerCrop"
+        android:src="@drawable/rick_morty_wallpaper" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_vertical_005"
@@ -21,5 +27,61 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.95" />
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_details_character"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="5:2.5"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vertical_95"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_005"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/CornerSize5Percent"
+        tools:src="@drawable/rick_morty_wallpaper" />
 
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_movies"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#cae3d1"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vertical_95"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_005"
+        app:layout_constraintTop_toBottomOf="@+id/img_details_character">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_details_character"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/characters_episodes_appearance" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_episodes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_details_character"
+                tools:listitem="@layout/item_episode" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

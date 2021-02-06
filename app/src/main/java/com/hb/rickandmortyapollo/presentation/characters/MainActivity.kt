@@ -11,6 +11,8 @@ import com.hb.rickandmortyapollo.databinding.ActivityMainBinding
 import com.hb.rickandmortyapollo.domain.models.SingleCharacterModel
 import com.hb.rickandmortyapollo.presentation.details.DetailsActivity
 import com.hb.rickandmortyapollo.utils.CHARACTER_EXTRA
+import com.hb.rickandmortyapollo.utils.hide
+import com.hb.rickandmortyapollo.utils.show
 import com.hb.rickandmortyapollo.utils.toast
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -33,8 +35,8 @@ class MainActivity : AppCompatActivity() {
             it.onSuccess { list ->
                 binding.progressCircular.hide()
                 with(binding.rvRickAndMorty) {
-                    adapter = ListCharactersAdapter(list.results) {
-                        goToDetailsActivity(it)
+                    adapter = CharactersAdapter(list.results) { character ->
+                        goToDetailsActivity(character)
                     }
                 }
             }.onError { error ->

@@ -8,11 +8,11 @@ import com.hb.rickandmortyapollo.R
 import com.hb.rickandmortyapollo.databinding.ItemCharacterBinding
 import com.hb.rickandmortyapollo.domain.models.SingleCharacterModel
 
-class ListCharactersAdapter(
+class CharactersAdapter(
     private val list: List<SingleCharacterModel>,
     private val clickAction: (SingleCharacterModel) -> Unit
 ) :
-    RecyclerView.Adapter<ListCharactersAdapter.ViewHolder>() {
+    RecyclerView.Adapter<CharactersAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
         ItemCharacterBinding.inflate(

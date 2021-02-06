@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".presentation.characters.MainActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.25"
+        android:scaleType="centerCrop"
+        android:src="@drawable/rick_morty_wallpaper" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_vertical_005"
@@ -30,7 +36,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="@id/guideline_vertical_005"
         app:layout_constraintRight_toRightOf="@id/guideline_vertical_95"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item_character" />
 
     <ProgressBar
         android:id="@+id/progress_circular"
