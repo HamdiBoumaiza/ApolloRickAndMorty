@@ -3,26 +3,21 @@ package com.hb.rickandmortyapollo.di
 import com.hb.rickandmortyapollo.data.datasource.RemoteDataSourceImpl
 import com.hb.rickandmortyapollo.data.repository.AppRepositoryImpl
 import com.hb.rickandmortyapollo.domain.repository.AppRepository
-import com.hb.rickandmortyapollo.domain.usecases.GetCharactersUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
 object RepositoryModule {
 
     @Provides
+    @Singleton
     fun provideAppRepository(): AppRepository {
-        val starWarsDataSourceImpl = RemoteDataSourceImpl()
-        return AppRepositoryImpl(starWarsDataSourceImpl)
+        val remoteDataSourceImpl = RemoteDataSourceImpl()
+        return AppRepositoryImpl(remoteDataSourceImpl)
     }
-
-    @Provides
-    fun provideGetCharactersUseCase(
-        appRepository: AppRepository
-    ): GetCharactersUseCase =
-        GetCharactersUseCase(appRepository)
 
 }
