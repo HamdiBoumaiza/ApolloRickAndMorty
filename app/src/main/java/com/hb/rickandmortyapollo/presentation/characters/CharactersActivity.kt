@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.hb.rickandmortyapollo.data.commun.onError
 import com.hb.rickandmortyapollo.data.commun.onLoading
 import com.hb.rickandmortyapollo.data.commun.onSuccess
-import com.hb.rickandmortyapollo.databinding.ActivityMainBinding
+import com.hb.rickandmortyapollo.databinding.ActivityCharactersBinding
 import com.hb.rickandmortyapollo.domain.models.SingleCharacterModel
 import com.hb.rickandmortyapollo.presentation.details.DetailsActivity
 import com.hb.rickandmortyapollo.utils.CHARACTER_EXTRA
@@ -17,14 +17,14 @@ import com.hb.rickandmortyapollo.utils.toast
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class CharactersActivity : AppCompatActivity() {
 
     private val viewModel: MainActivityViewModel by viewModels()
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityCharactersBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityCharactersBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initObserver()
         viewModel.getListCharacters(1)
