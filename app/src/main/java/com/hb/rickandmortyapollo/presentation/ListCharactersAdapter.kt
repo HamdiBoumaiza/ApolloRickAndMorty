@@ -3,6 +3,8 @@ package com.hb.rickandmortyapollo.presentation
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
+import com.hb.rickandmortyapollo.R
 import com.hb.rickandmortyapollo.databinding.ItemCharacterBinding
 import com.hb.rickandmortyapollo.domain.models.SingleCharacterModel
 
@@ -28,7 +30,11 @@ class ListCharactersAdapter(private val list: List<SingleCharacterModel>) :
         fun bindTo(singleCharacterModel: SingleCharacterModel) {
             with(view) {
                 singleCharacterModel.apply {
-                    tvCharacter.text = singleCharacterModel.name
+                    tvCharacter.text = name
+                    imgCharacter.load(image) {
+                        crossfade(true)
+                        placeholder(R.drawable.ic_baseline_filter_hdr_24)
+                    }
                 }
             }
         }

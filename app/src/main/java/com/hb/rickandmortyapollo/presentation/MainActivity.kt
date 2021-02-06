@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity() {
             it.onSuccess { list ->
                 binding.progressCircular.hide()
                 with(binding.rvRickAndMorty) {
-                    layoutManager = LinearLayoutManager(this@MainActivity)
                     adapter = ListCharactersAdapter(list.results)
                 }
             }.onError { error ->
