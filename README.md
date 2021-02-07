@@ -32,6 +32,8 @@ Libraries Used
 * [Material](https://material.io/develop/android/docs/getting-started/) - Material Components.
 * [Coroutine](https://github.com/Kotlin/kotlinx.coroutines#user-content-android) - performs background tasks
 * [Flows](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/) - for asynchronous data streams
+* [Coil](https://github.com/coil-kt/coil) - An image loading library for Android backed by Kotlin Coroutines
+* [Gson](https://github.com/google/gson) - JSON Parser
 * [Apollo](https://www.apollographql.com/docs/android/)- networking
 * [Dagger Hilt](https://dagger.dev/hilt/) - dependency injector
 * [Espresso](https://developer.android.com/training/testing/espresso/) // UI test
