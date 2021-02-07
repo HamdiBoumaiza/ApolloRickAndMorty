@@ -23,7 +23,8 @@ class DetailsActivity : AppCompatActivity() {
         getExtraCharacter()?.let {
             with(binding) {
                 imgDetailsCharacter.load(it.image)
-                tvDetailsCharacter.text = getString(R.string.characters_episodes_appearance, it.name)
+                tvDetailsCharacter.text =
+                    getString(R.string.characters_episodes_appearance, it.name)
                 rvEpisodes.adapter = EpisodesAdapter(it.episode)
             }
         }

@@ -25,13 +25,8 @@ class EpisodesAdapter(private val list: List<EpisodeModel>) :
 
     inner class ViewHolder(private val view: ItemEpisodeBinding) :
         RecyclerView.ViewHolder(view.root) {
-
-        fun bindTo(singleCharacterModel: EpisodeModel) {
-            with(view) {
-                singleCharacterModel.apply {
-                    tvEpisode.text = name
-                }
-            }
+        fun bindTo(episodeModel: EpisodeModel) {
+            view.tvEpisode.text = episodeModel.name
         }
     }
 }

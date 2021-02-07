@@ -8,6 +8,7 @@ import com.hb.rickandmortyapollo.data.commun.onError
 import com.hb.rickandmortyapollo.data.commun.onLoading
 import com.hb.rickandmortyapollo.data.commun.onSuccess
 import com.hb.rickandmortyapollo.databinding.ActivityCharactersBinding
+import com.hb.rickandmortyapollo.domain.models.CharactersModel
 import com.hb.rickandmortyapollo.domain.models.SingleCharacterModel
 import com.hb.rickandmortyapollo.presentation.details.DetailsActivity
 import com.hb.rickandmortyapollo.utils.CHARACTER_EXTRA
@@ -34,17 +35,19 @@ class CharactersActivity : AppCompatActivity() {
         viewModel.resultListCharacters.observe(this) {
             it.onSuccess { list ->
                 binding.progressCircular.hide()
-                with(binding.rvRickAndMorty) {
-                    adapter = CharactersAdapter(list.results) { character ->
-                        goToDetailsActivity(character)
-                    }
-                }
+                setListCharacters(list)
             }.onError { error ->
                 binding.progressCircular.hide()
                 toast(error.messageResource.toString())
             }.onLoading {
                 binding.progressCircular.show()
             }
+        }
+    }
+
+    private fun setListCharacters(list: CharactersModel) {
+        with(binding.rvRickAndMorty) {
+            adapter = CharactersAdapter(list.results) { goToDetailsActivity(it) }
         }
     }
 
