@@ -41,38 +41,67 @@ android {
 }
 
 dependencies {
+    def coreKtx="1.3.2"
+    def appCompact ="1.2.0"
+    def constraint = "2.0.4"
+    def fragmentKtx = "1.2.5"
+    def hilt_android_version = "2.28.3-alpha"
+    def hilt_version = "1.0.0-alpha02"
+    def viewModel = "2.2.0"
+    def coroutine = "1.4.2"
+    def material = "1.2.1"
+    def apollo = "2.4.6"
+    def coil = "1.1.1"
+    def gson = "2.8.6"
+    def testCoreRunner = "1.2.0"
+    def espresso = "3.3.0"
+    def googleTruth = "1.0"
+    def barista = "3.7.0"
+    def androidxJunit = "1.1.2"
+    def junit = "4.13.1"
+    def androidxArchTest = "2.1.0"
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.3.2'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation "androidx.core:core-ktx:$coreKtx"
+    implementation "androidx.appcompat:appcompat:$appCompact"
+    implementation "com.google.android.material:material:$material"
+    implementation "androidx.constraintlayout:constraintlayout:$constraint"
 
-    implementation "com.apollographql.apollo:apollo-runtime:2.4.6"
-    implementation "com.apollographql.apollo:apollo-coroutines-support:2.4.6"
+    implementation "com.apollographql.apollo:apollo-runtime:$apollo"
+    implementation "com.apollographql.apollo:apollo-coroutines-support:$apollo"
 
-    implementation "com.google.android.material:material:1.2.1"
 
-    implementation "io.coil-kt:coil:1.1.1"
+    implementation "io.coil-kt:coil:$coil"
 
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine"
 
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$viewModel"
 
 
     //Hilt
-    def hilt_version = "2.28.3-alpha"
-    implementation "com.google.dagger:hilt-android:$hilt_version"
-    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
-    implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha02'
-    kapt 'androidx.hilt:hilt-compiler:1.0.0-alpha02'
+    implementation "com.google.dagger:hilt-android:$hilt_android_version"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_android_version"
+    kapt "androidx.hilt:hilt-compiler:$hilt_version"
 
-    implementation "androidx.fragment:fragment-ktx:1.2.5"
+    implementation "androidx.fragment:fragment-ktx:$fragmentKtx"
 
-    testImplementation 'junit:junit:4.13.1'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    //Gson
+    implementation "com.google.code.gson:gson:$gson"
+
+    //TEST SUITE
+    androidTestImplementation "androidx.test:runner:$testCoreRunner"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso"
+    androidTestImplementation "androidx.test.ext:junit:$androidxJunit"
+    androidTestImplementation("com.schibsted.spain:barista:$barista") {
+        exclude group: "org.jetbrains.kotlin"
+    }
+
+    testImplementation "androidx.arch.core:core-testing:$androidxArchTest"
+    testImplementation "junit:junit:$junit"
+    testImplementation "com.google.truth:truth:$googleTruth"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutine"
 }
 
 apollo {

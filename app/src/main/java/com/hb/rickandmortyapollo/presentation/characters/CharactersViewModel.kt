@@ -11,7 +11,7 @@ import com.hb.rickandmortyapollo.domain.usecases.GetCharactersUseCase
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-class MainActivityViewModel @ViewModelInject constructor(
+class CharactersViewModel @ViewModelInject constructor(
     private val getCharactersUseCase: GetCharactersUseCase
 ) : ViewModel() {
 

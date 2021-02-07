@@ -19,7 +19,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class CharactersActivity : AppCompatActivity() {
 
-    private val viewModel: MainActivityViewModel by viewModels()
+    private val viewModel: CharactersViewModel by viewModels()
     private lateinit var binding: ActivityCharactersBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
