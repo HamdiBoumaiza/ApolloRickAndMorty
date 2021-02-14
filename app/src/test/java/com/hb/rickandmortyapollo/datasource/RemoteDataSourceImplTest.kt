@@ -16,7 +16,7 @@ class RemoteDataSourceImplTest : RemoteDataSource {
         return if (result != null) {
             RickAndMortyResult.Success(result.characters)
         } else {
-            RickAndMortyResult.Error(DataSourceException.Server(emptyList()))
+            RickAndMortyResult.Error(DataSourceException.Server(null))
         }
     }
 

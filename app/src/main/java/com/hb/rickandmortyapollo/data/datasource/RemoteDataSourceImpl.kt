@@ -13,7 +13,7 @@ class RemoteDataSourceImpl : RemoteDataSource {
         return try {
             val result = GraphQlApolloClient.getCharacters(page).await()
             if (result.hasErrors()) {
-                RickAndMortyResult.Error(DataSourceException.Server(result.errors))
+                RickAndMortyResult.Error(DataSourceException.Server(result.errors?.first()))
             } else {
                 RickAndMortyResult.Success(result.data?.characters)
             }

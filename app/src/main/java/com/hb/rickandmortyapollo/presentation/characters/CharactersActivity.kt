@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.apollographql.apollo.api.Error
 import com.hb.rickandmortyapollo.data.commun.onError
 import com.hb.rickandmortyapollo.data.commun.onLoading
 import com.hb.rickandmortyapollo.data.commun.onSuccess
@@ -38,7 +39,12 @@ class CharactersActivity : AppCompatActivity() {
                 setListCharacters(list)
             }.onError { error ->
                 binding.progressCircular.hide()
-                toast(error.messageResource.toString())
+                when (error.messageResource) {
+                    is Int -> toast(getString(error.messageResource))
+                    is Error? -> {
+                        error.messageResource?.let { errorMessage -> toast(errorMessage.message) }
+                    }
+                }
             }.onLoading {
                 binding.progressCircular.show()
             }
