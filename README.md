@@ -7,14 +7,14 @@ This app is based on the [Guide to app architecture](https://developer.android.c
 1. UI calls method from ViewModel.
 2. ViewModel executes Use case.
 3. Use case executes one or multiple Repositorie function.
-4. The Repository returns data from one or multiple Data Sources(REMOTE-Rick and morty GraphQl , LOCAL-Room DB). the repository is the single source of truth
+4. The Repository returns data from one or multiple Data Sources(Remote-Rick and morty GraphQL , Local-Room DB). the repository is the single source of truth
 5. Information flows back to the UI where we display the data fetched from data sources.
 
 I made a diagram to show the flow of the data between the three layers(data, domain , presentation) 
 ![data flow diagram](screenshots/diagram.png)
 # Project Structure
 * Data
-    * This is my data layer and consists of the Repository implementation class as well as the remote data sources and mappers
+    * This is my data layer and consists of the Repository implementation class as well as the remote and local data sources and mappers
 * Domain
     * This is the domain layer and consists of the domain models as well as the usecases.
 * UI 

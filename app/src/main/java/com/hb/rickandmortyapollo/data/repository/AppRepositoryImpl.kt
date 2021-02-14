@@ -21,9 +21,10 @@ class AppRepositoryImpl(
             when (val result = remoteDataSource.getCharacters(page)) {
                 is RickAndMortyResult.Success -> {
                     result.data?.let {
-                        val charactersModel = it.mapToDomainModel()
-                        appDao.saveListCharacters(charactersModel.results)
-                        emit(RickAndMortyResult.Success(charactersModel))
+                        it.mapToDomainModel().apply {
+                            appDao.saveListCharacters(results)
+                            emit(RickAndMortyResult.Success(this))
+                        }
                     }
                 }
                 is RickAndMortyResult.Error -> {
