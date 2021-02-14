@@ -4,7 +4,7 @@ import com.google.gson.Gson
 import com.hb.rickandmortyapollo.GetCharactersQuery
 import com.hb.rickandmortyapollo.data.commun.DataSourceException
 import com.hb.rickandmortyapollo.data.commun.RickAndMortyResult
-import com.hb.rickandmortyapollo.data.datasource.RemoteDataSource
+import com.hb.rickandmortyapollo.data.datasource.remote.RemoteDataSource
 import com.hb.rickandmortyapollo.helpers.getJson
 import com.hb.rickandmortyapollo.utils.fromJsonToObjectType
 

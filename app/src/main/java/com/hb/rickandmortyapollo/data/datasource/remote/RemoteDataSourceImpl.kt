@@ -1,4 +1,4 @@
-package com.hb.rickandmortyapollo.data.datasource
+package com.hb.rickandmortyapollo.data.datasource.remote
 
 import com.apollographql.apollo.coroutines.await
 import com.hb.rickandmortyapollo.GetCharactersQuery

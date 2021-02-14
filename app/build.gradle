@@ -53,6 +53,7 @@ dependencies {
     def apollo = "2.4.6"
     def coil = "1.1.1"
     def gson = "2.8.6"
+    def room_version = "2.2.6"
     def testCoreRunner = "1.2.0"
     def espresso = "3.3.0"
     def googleTruth = "1.0"
@@ -89,6 +90,11 @@ dependencies {
 
     //Gson
     implementation "com.google.code.gson:gson:$gson"
+
+    //Room
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
 
     //TEST SUITE
     androidTestImplementation "androidx.test:runner:$testCoreRunner"
