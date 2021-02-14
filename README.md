@@ -34,7 +34,7 @@ Libraries Used
 * [Flows](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/) - for asynchronous data streams
 * [Coil](https://github.com/coil-kt/coil) - An image loading library for Android backed by Kotlin Coroutines
 * [Gson](https://github.com/google/gson) - JSON Parser
-* [Apollo](https://www.apollographql.com/docs/android/)- networking
+* [Apollo](https://www.apollographql.com/docs/android/)- GraphQL client for the JVM, Android and Kotlin multiplatform
 * [Dagger Hilt](https://dagger.dev/hilt/) - dependency injector
 * [Room](https://developer.android.com/training/data-storage/room) - Save data in a local database
 * [Espresso](https://developer.android.com/training/testing/espresso/) // UI test
