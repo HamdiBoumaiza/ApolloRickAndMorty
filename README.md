@@ -7,7 +7,7 @@ This app is based on the [Guide to app architecture](https://developer.android.c
 1. UI calls method from ViewModel.
 2. ViewModel executes Use case.
 3. Use case executes one or multiple Repositorie function.
-4. The Repository returns data from one or multiple Data Sources. the repository is the single source of truth (maybe i'll add room to support local data source later)
+4. The Repository returns data from one or multiple Data Sources(REMOTE-Rick and morty GraphQl , LOCAL-Room DB). the repository is the single source of truth
 5. Information flows back to the UI where we display the data fetched from data sources.
 
 I made a diagram to show the flow of the data between the three layers(data, domain , presentation) 
@@ -36,6 +36,7 @@ Libraries Used
 * [Gson](https://github.com/google/gson) - JSON Parser
 * [Apollo](https://www.apollographql.com/docs/android/)- networking
 * [Dagger Hilt](https://dagger.dev/hilt/) - dependency injector
+* [Room](https://developer.android.com/training/data-storage/room) - Save data in a local database
 * [Espresso](https://developer.android.com/training/testing/espresso/) // UI test
 * [Barsita](https://github.com/AdevintaSpain/Barista) -UI tests Built on top of Espresso
 * [Junit](https://junit.org/junit4/) // unit tests
