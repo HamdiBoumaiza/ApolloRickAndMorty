@@ -28,12 +28,13 @@ class AppRepositoryImpl(
                     }
                 }
                 is RickAndMortyResult.Error -> {
-                    if (appDao.getListCharacters().isNotEmpty()) {
+                    val listCharacters = appDao.getListCharacters()
+                    if (listCharacters.isNotEmpty()) {
                         emit(
                             RickAndMortyResult.Success(
                                 CharactersModel(
                                     InfoModel(),
-                                    appDao.getListCharacters()
+                                    listCharacters
                                 )
                             )
                         )
