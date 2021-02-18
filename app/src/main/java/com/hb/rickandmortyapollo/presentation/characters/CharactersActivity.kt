@@ -2,7 +2,6 @@ package com.hb.rickandmortyapollo.presentation.characters
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.apollographql.apollo.api.Error
 import com.hb.rickandmortyapollo.data.commun.onError
@@ -16,12 +15,11 @@ import com.hb.rickandmortyapollo.utils.CHARACTER_EXTRA
 import com.hb.rickandmortyapollo.utils.hide
 import com.hb.rickandmortyapollo.utils.show
 import com.hb.rickandmortyapollo.utils.toast
-import dagger.hilt.android.AndroidEntryPoint
+import org.koin.android.viewmodel.ext.android.viewModel
 
-@AndroidEntryPoint
 class CharactersActivity : AppCompatActivity() {
 
-    private val viewModel: CharactersViewModel by viewModels()
+    private val viewModel: CharactersViewModel by viewModel()
     private lateinit var binding: ActivityCharactersBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

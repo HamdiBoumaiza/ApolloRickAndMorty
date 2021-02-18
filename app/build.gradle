@@ -3,7 +3,6 @@ plugins {
     id 'kotlin-android'
     id 'com.apollographql.apollo'
     id 'kotlin-kapt'
-    id 'dagger.hilt.android.plugin'
     id 'kotlin-parcelize'
 }
 
@@ -44,9 +43,8 @@ dependencies {
     def coreKtx="1.3.2"
     def appCompact ="1.2.0"
     def constraint = "2.0.4"
-    def fragmentKtx = "1.2.5"
-    def hilt_android_version = "2.28.3-alpha"
-    def hilt_version = "1.0.0-alpha02"
+    def koin = "2.2.0-alpha-1"
+    def koinViewModel = "2.1.6"
     def viewModel = "2.2.0"
     def coroutine = "1.4.2"
     def material = "1.2.1"
@@ -80,13 +78,9 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$viewModel"
 
 
-    //Hilt
-    implementation "com.google.dagger:hilt-android:$hilt_android_version"
-    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_version"
-    kapt "com.google.dagger:hilt-android-compiler:$hilt_android_version"
-    kapt "androidx.hilt:hilt-compiler:$hilt_version"
-
-    implementation "androidx.fragment:fragment-ktx:$fragmentKtx"
+    //Koin
+    implementation "org.koin:koin-android:$koin"
+    implementation "org.koin:koin-android-viewmodel:$koinViewModel"
 
     //Gson
     implementation "com.google.code.gson:gson:$gson"

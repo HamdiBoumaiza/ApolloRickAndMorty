@@ -1,6 +1,5 @@
 package com.hb.rickandmortyapollo.presentation.characters
 
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -11,7 +10,7 @@ import com.hb.rickandmortyapollo.domain.usecases.GetCharactersUseCase
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-class CharactersViewModel @ViewModelInject constructor(
+class CharactersViewModel constructor(
     private val getCharactersUseCase: GetCharactersUseCase
 ) : ViewModel() {
 

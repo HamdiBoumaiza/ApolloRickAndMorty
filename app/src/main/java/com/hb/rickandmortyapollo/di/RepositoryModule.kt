@@ -4,21 +4,19 @@ import com.hb.rickandmortyapollo.data.datasource.local.AppDao
 import com.hb.rickandmortyapollo.data.datasource.remote.RemoteDataSourceImpl
 import com.hb.rickandmortyapollo.data.repository.AppRepositoryImpl
 import com.hb.rickandmortyapollo.domain.repository.AppRepository
-import dagger.Module
-import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.components.SingletonComponent
-import javax.inject.Singleton
+import com.hb.rickandmortyapollo.domain.usecases.GetCharactersUseCase
+import org.koin.dsl.module
 
-@Module
-@InstallIn(SingletonComponent::class)
-object RepositoryModule {
+val RepositoryModule = module {
+    single { getCharactersUseCase(get()) }
+    single { provideAppRepository(get()) }
+}
 
-    @Provides
-    @Singleton
-    fun provideAppRepository(appDao: AppDao): AppRepository {
-        val remoteDataSourceImpl = RemoteDataSourceImpl()
-        return AppRepositoryImpl(remoteDataSourceImpl,appDao)
-    }
+fun provideAppRepository(appDao: AppDao): AppRepository {
+    val remoteDataSourceImpl = RemoteDataSourceImpl()
+    return AppRepositoryImpl(remoteDataSourceImpl, appDao)
+}
 
+fun getCharactersUseCase(appRepository: AppRepository): GetCharactersUseCase {
+    return GetCharactersUseCase(appRepository)
 }
