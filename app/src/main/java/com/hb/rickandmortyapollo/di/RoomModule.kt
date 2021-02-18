@@ -19,5 +19,5 @@ class RoomModule {
     fun provideAppDatabase(@ApplicationContext context: Context) = AppDb.getDatabase(context)
 
     @Provides
-    fun provideRestaurantDAO(db: AppDb) = db.appDao()
+    fun provideAppDAO(db: AppDb) = db.appDao()
 }
