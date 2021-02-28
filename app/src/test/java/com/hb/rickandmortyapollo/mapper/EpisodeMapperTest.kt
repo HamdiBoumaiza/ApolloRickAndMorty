@@ -17,5 +17,4 @@ class EpisodeMapperTest {
         Truth.assertThat(episodeModel.name).isNotEmpty()
         Truth.assertThat(episodeModel.name).matches("Pilot")
     }
-
 }

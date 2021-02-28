@@ -18,7 +18,6 @@ object RepositoryModule {
     @Singleton
     fun provideAppRepository(appDao: AppDao): AppRepository {
         val remoteDataSourceImpl = RemoteDataSourceImpl()
-        return AppRepositoryImpl(remoteDataSourceImpl,appDao)
+        return AppRepositoryImpl(remoteDataSourceImpl, appDao)
     }
-
 }

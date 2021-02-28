@@ -21,5 +21,4 @@ class RemoteDataSourceImpl : RemoteDataSource {
             RickAndMortyResult.Error(DataSourceException.Unexpected(R.string.error_unexpected_message))
         }
     }
-
 }

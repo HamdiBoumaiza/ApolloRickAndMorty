@@ -6,7 +6,6 @@ import com.hb.rickandmortyapollo.domain.models.EpisodeModel
 import com.hb.rickandmortyapollo.domain.models.InfoModel
 import com.hb.rickandmortyapollo.domain.models.SingleCharacterModel
 
-
 fun GetCharactersQuery.Info.mapToDomainModel() = InfoModel(pages ?: 0, count ?: 0, next ?: 0)
 
 fun GetCharactersQuery.Episode.mapToDomainModel() = EpisodeModel(id ?: "", name ?: "")

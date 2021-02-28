@@ -21,5 +21,4 @@ class CharactersMapperTest {
         Truth.assertThat(infoModel.results.size).isAtLeast(0)
         Truth.assertThat(infoModel.results[0].name).matches("")
     }
-
 }

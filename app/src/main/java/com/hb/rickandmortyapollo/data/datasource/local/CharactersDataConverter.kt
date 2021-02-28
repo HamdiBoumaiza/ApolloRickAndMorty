@@ -7,7 +7,6 @@ import com.hb.rickandmortyapollo.domain.models.EpisodeModel
 import com.hb.rickandmortyapollo.domain.models.SingleCharacterModel
 import java.io.Serializable
 
-
 class CharactersDataConverter : Serializable {
 
     private val gson by lazy { Gson() }

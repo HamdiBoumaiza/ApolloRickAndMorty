@@ -50,6 +50,5 @@ class SearchCharactersViewModelTest {
         }?.onError { error ->
             assertThat(error).isNull()
         }
-
     }
 }

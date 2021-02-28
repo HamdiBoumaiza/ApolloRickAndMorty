@@ -19,5 +19,4 @@ class RemoteDataSourceImplTest : RemoteDataSource {
             RickAndMortyResult.Error(DataSourceException.Server(null))
         }
     }
-
 }

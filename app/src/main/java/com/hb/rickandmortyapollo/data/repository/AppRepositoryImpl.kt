@@ -1,6 +1,5 @@
 package com.hb.rickandmortyapollo.data.repository
 
-
 import com.hb.rickandmortyapollo.data.commun.RickAndMortyResult
 import com.hb.rickandmortyapollo.data.datasource.local.AppDao
 import com.hb.rickandmortyapollo.data.datasource.remote.RemoteDataSource
@@ -13,7 +12,8 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.onStart
 
 class AppRepositoryImpl(
-    private val remoteDataSource: RemoteDataSource, private val appDao: AppDao,
+    private val remoteDataSource: RemoteDataSource,
+    private val appDao: AppDao
 ) :
     AppRepository {
     override suspend fun getCharacters(page: Int): Flow<RickAndMortyResult<CharactersModel>> =

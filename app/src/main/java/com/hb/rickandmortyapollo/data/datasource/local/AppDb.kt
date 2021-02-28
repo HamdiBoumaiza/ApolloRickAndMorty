@@ -9,7 +9,7 @@ import com.hb.rickandmortyapollo.BuildConfig
 import com.hb.rickandmortyapollo.domain.models.EpisodeModel
 import com.hb.rickandmortyapollo.domain.models.SingleCharacterModel
 
-@Database(entities = [SingleCharacterModel::class,EpisodeModel::class], version = 1)
+@Database(entities = [SingleCharacterModel::class, EpisodeModel::class], version = 1)
 @TypeConverters(CharactersDataConverter::class)
 abstract class AppDb : RoomDatabase() {
 

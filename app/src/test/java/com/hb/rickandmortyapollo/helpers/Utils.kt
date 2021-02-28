@@ -1,6 +1,5 @@
 package com.hb.rickandmortyapollo.helpers
 
-
 import com.google.common.io.Resources.getResource
 import java.io.File
 

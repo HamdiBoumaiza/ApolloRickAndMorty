@@ -8,7 +8,7 @@ import org.junit.Test
 
 class SingleCharacterMapperTest {
 
-    private val result = GetCharactersQuery.Result(id = "",name = "Rick",image = "url",episode = emptyList())
+    private val result = GetCharactersQuery.Result(id = "", name = "Rick", image = "url", episode = emptyList())
     private val infoModel: SingleCharacterModel = result.mapToDomainModel()
 
     @Test
@@ -19,5 +19,4 @@ class SingleCharacterMapperTest {
         Truth.assertThat(infoModel.image).matches("url")
         Truth.assertThat(infoModel.episode).isEmpty()
     }
-
 }

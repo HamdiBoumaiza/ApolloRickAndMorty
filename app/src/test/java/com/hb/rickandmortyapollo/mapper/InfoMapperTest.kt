@@ -16,5 +16,4 @@ class InfoMapperTest {
         Truth.assertThat(infoModel.next).isAtLeast(0)
         Truth.assertThat(infoModel.count).isGreaterThan(0)
     }
-
 }

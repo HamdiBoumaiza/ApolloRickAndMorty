@@ -32,6 +32,4 @@ class DetailsActivity : AppCompatActivity() {
 
     private fun getExtraCharacter() =
         intent?.extras?.getParcelable(CHARACTER_EXTRA) as SingleCharacterModel?
-
-
 }

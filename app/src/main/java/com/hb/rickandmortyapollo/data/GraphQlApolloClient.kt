@@ -11,7 +11,6 @@ object GraphQlApolloClient {
     private fun apolloClient(): ApolloClient =
         ApolloClient.builder().serverUrl(BASE_URL).build()
 
-
     fun getCharacters(page: Int): ApolloQueryCall<GetCharactersQuery.Data> =
         apolloClient().query(GetCharactersQuery(Input.optional(page)))
 }

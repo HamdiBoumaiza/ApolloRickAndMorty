@@ -15,7 +15,6 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import java.lang.Thread.sleep
 
-
 @RunWith(AndroidJUnit4ClassRunner::class)
 class CharactersActivityTests {
 
@@ -35,8 +34,7 @@ class CharactersActivityTests {
     @Test
     fun testListListenerAndRecyclerView() {
         sleep(4000)
-        assertDisplayedAtPosition(R.id.rv_rick_and_morty, 0, R.id.tv_character, "Rick Sanchez");
+        assertDisplayedAtPosition(R.id.rv_rick_and_morty, 0, R.id.tv_character, "Rick Sanchez")
         BaristaListInteractions.clickListItem(R.id.rv_rick_and_morty, 0)
     }
-
 }
