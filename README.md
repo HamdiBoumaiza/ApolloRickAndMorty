@@ -1,8 +1,12 @@
 # About ApolloRickAndMorty
 Hello there , 
-In this project I tried showcasing how to build an Android Application with clean architecture and MVVM using some of the jetpack libraries with Kotlin Coroutines & Dagger Hilt. This App is using the [Rick and Morty GraphQl](https://rickandmortyapi.com/graphql) as a remote data source.    
+In this project I tried showcasing how to build an Android Application with clean architecture and MVVM using some of the jetpack libraries with Kotlin Coroutines & Dagger Hilt. This App is using the [Rick and Morty GraphQl](https://rickandmortyapi.com/graphql) as a remote data source.
+
 This app is based on the [Guide to app architecture](https://developer.android.com/jetpack/docs/guide) article, [Kotlin 1.4](https://kotlinlang.org/docs/reference/whatsnew13.html), and [coroutine](https://kotlinlang.org/docs/reference/coroutines/basics.html). I also used some android architecture components like [LiveData](https://developer.android.com/jetpack/arch/livedata), [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel).
+
 I wrote [a medium article](https://medium.com/nerd-for-tech/graphql-with-apollo-android-why-its-worth-taking-a-look-f30ceb4a23ae) to talk about GraphQL and how to implement it in an android application, feel free to check it out.
+
+
 # Project Architecture
 ### Communication between layers 
 1. UI calls method from ViewModel.
